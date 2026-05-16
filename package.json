@@ -1,7 +1,7 @@
 {
-	"name": "Dozen",
-	"version": "1.0.0",
-	"description": "A simple starter website for the 11ty static site generator.",
+	"name": "camcoulter.com",
+	"version": "0.1",
+	"description": "My personal website/blog",
 	"main": "index.html",
 	"scripts": {
 		"start": "eleventy --serve",
@@ -9,7 +9,7 @@
 	},
 	"keywords": [],
 	"author": "Cam Coulter",
-	"license": "MIT",
+	"license": "GNU Affero General Public License, version 3",
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^6.0.4"
