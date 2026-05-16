@@ -299,6 +299,19 @@ a[href="#main-content"]:focus {
 }
 
 /*
+	## Icons
+	--------
+*/
+.bi { // Bootstrap Icons
+	display: inline-block;
+	font-size: inherit;
+	height: 1em;
+	overflow: visible;
+	vertical-align: -.125em;
+	padding-inline-end: 0.25em;
+}
+
+/*
 	# Page-Specific Styles
 	======================
 */
