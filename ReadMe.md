@@ -8,10 +8,11 @@ Content:
 
 * Pages
     * Update homepage
+    * Pretty up and fix About
+    * Pretty up and fix Projects
 * Images
     * Update default image
     * Add headshot to About
-    * Add icons to About
     * Add images for blog and stuff
 
 Publishing:
