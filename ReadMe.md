@@ -6,6 +6,10 @@ This is my personal website. It's been around a long time, since like 2016 or so
 
 Content:
 
+* Posts
+    * ~~Add blog posts (without images)~~
+    * Add blog posts (with images)
+    * Add featured images
 * Pages
     * Update homepage
     * Pretty up and fix About

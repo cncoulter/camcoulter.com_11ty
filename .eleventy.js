@@ -2,11 +2,16 @@ const { DateTime } = require("luxon"); // Luxon is a JavaScript library for work
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img"); // Image plugin
 const path = require("node:path"); // used for Image plugin
 
-module.exports = function (eleventyConfig) {
-
+module.exports = async function (eleventyConfig) {
+  
 	// |---------|
 	// | Plugins |
 	// |---------|
+
+	// Add IdAttributePlugin, which automatially adds IDs to all your headings
+	// https://www.11ty.dev/docs/plugins/id-attribute/
+	const { IdAttributePlugin } = await import("@11ty/eleventy");
+	eleventyConfig.addPlugin(IdAttributePlugin);
 
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, { // images plugin
 		// output image formats
@@ -201,6 +206,94 @@ module.exports = function (eleventyConfig) {
 	// Create the shortcode: {% year %}
 	// which returns the current year.
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+	// |------------|
+	// | Transforms |
+	// |------------|
+
+	// Automatically inject tabindex="-1" into all headings
+	// See https://www.camcoulter.com/2024/05/23/skip-links-and-tabindex/
+	eleventyConfig.addTransform("add-tabindex", function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+			// Find <h1...> through <h6...> and safely inject tabindex="-1" 
+			// If tabindex="-1" already exists, don't add it a second time
+			return content.replace(/<(h[1-6])(?![^>]*\btabindex\b)([^>]*)>/gi, '<$1 tabindex="-1"$2>');
+		}
+		return content;
+	});
+
+	// Generates a Table of Contents (TOC) anywhere you have "[INSERT_TOC]".
+	// Depends on the IdAttributePlugin adding ID attributes to all your headings.
+	eleventyConfig.addTransform("add-toc", function(content) {
+		if ((this.page.outputPath || "").endsWith(".html") && content.includes("[INSERT_TOC]")) {
+
+			let toc = `<div class="raised">\n  <h2>Contents</h2>\n  <ol id="toc" class="section-nav">\n`;
+			let currentLevel = 2;
+			let first = true;
+
+			// Find <h1> through <h6> tags that have an ID
+			const regex = /<h([1-6])[^>]*\bid="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
+			let match;
+			let foundHeadings = false;
+			let passedFirstH1 = false;
+
+			while ((match = regex.exec(content)) !== null) {
+				const level = parseInt(match[1]);
+
+				// Once we see the first h1, flip the flag to true and skip the h1 itself
+				if (level === 1 && !passedFirstH1) {
+					passedFirstH1 = true;
+					continue;
+				}
+
+				// If we haven't passed the first h1 yet, or if it's another h1 later on, skip it
+				if (!passedFirstH1 || level === 1) {
+					continue;
+				}
+
+				foundHeadings = true;
+				const id = match[2];
+				const text = match[3];
+
+				if (first) {
+					if (level > 2) {
+						toc += "<ol>\n".repeat(level - 2);
+					}
+					first = false;
+				} else {
+					if (level > currentLevel) {
+						toc += "\n" + "<ol>\n".repeat(level - currentLevel);
+					} else if (level < currentLevel) {
+						toc += "</li>\n" + "</ol>\n</li>\n".repeat(currentLevel - level);
+					} else {
+						toc += "</li>\n";
+					}
+				}
+
+				toc += `    <li class="toc-entry toc-h${level}"><a href="#${id}">${text}</a>`;
+				currentLevel = level;
+			}
+
+			if (foundHeadings) {
+				toc += "</li>\n";
+				if (currentLevel > 2) {
+					toc += "</ol>\n</li>\n".repeat(currentLevel - 2);
+				}
+				toc += "  </ol>\n</div>";
+
+				// Targets [INSERT_TOC] AND the paragraph tags wrapping it
+				return content
+					.replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, toc)
+					.replace(/\[INSERT_TOC\]/g, toc); // Fallback just in case it wasn't wrapped
+			} else {
+				// Erase the marker and its wrapping <p> tags if no subheadings exist
+				return content
+					.replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, "")
+					.replace(/\[INSERT_TOC\]/g, "");
+			}
+		}
+		return content;
+	});
 
 	// |--------|
 	// | Return |
