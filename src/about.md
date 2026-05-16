@@ -23,12 +23,12 @@ Cam Coulter is a writer and accessibility nerd, among other things. They work as
 
 <h2 id="contact">Contact</h2>
 
-<a href="mailto:hi@camcoulter.com" class="link-turncoat link-turncoat--standalone">Email Cam Coulter</a>
+<a href="mailto:hi@camcoulter.com" class="link-turncoat link-turncoat--standalone">{% include "partials/SVGs/envelope.svg" %} Email Cam Coulter</a>
 
 <h2>Find me online</h2>
 
 <ul class="link-turncoat--list">
-	<li><a rel="me" href="https://fosstodon.org/@camcoulter" class="link-turncoat">Mastodon</a></li>
-	<li><a href="https://www.linkedin.com/in/camcoulter" class="link-turncoat">LinkedIn</a></li>
-	<li><a href="https://github.com/cncoulter" class="link-turncoat">GitHub</a></li>
+	<li><a rel="me" href="https://fosstodon.org/@camcoulter" class="link-turncoat">{% include "partials/SVGs/mastodon.svg" %} Mastodon</a></li>
+	<li><a href="https://www.linkedin.com/in/camcoulter" class="link-turncoat">{% include "partials/SVGs/linkedin.svg" %} LinkedIn</a></li>
+	<li><a href="https://github.com/cncoulter" class="link-turncoat">{% include "partials/SVGs/github.svg" %} GitHub</a></li>
 </ul>
