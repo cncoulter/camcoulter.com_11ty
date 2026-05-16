@@ -14,6 +14,9 @@ Content:
     * Update default image
     * Add headshot to About
     * Add images for blog and stuff
+* Publications
+    * Self-host Our Daily Beard podcast interview
+    
 
 Publishing:
 
