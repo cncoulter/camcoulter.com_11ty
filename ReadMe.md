@@ -9,6 +9,7 @@ Content:
 * Posts
     * ~~Add blog posts (without images)~~
     * Add blog posts (with images)
+    * Make sure you don't have any "{{ site.baseurl }}" issues in your blog posts
     * Add featured images
 * Pages
     * Update homepage

@@ -166,6 +166,38 @@ hr {
 }
 
 /*
+	## Figures & Images
+*/
+
+@media (prefers-color-scheme: dark) {
+	img {
+		filter: brightness(.8) contrast(1.2);
+	}
+}
+
+figure {
+	margin: 1em 0;
+	font-family: var(--ft-sans);
+	text-align: center;
+}
+
+figcaption {
+	margin-top: 0.15em;
+}
+
+img,
+picture {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+figure.full-width img {
+	width: 100%;
+}
+
+/*
 	# Specific, Recurring Components
 	================================
 */
