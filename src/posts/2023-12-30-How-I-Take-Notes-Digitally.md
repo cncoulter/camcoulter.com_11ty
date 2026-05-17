@@ -74,7 +74,7 @@ I set up a [GitHub repository](https://github.com/cncoulter/notes-to-website) th
 
 If you download the GitHub repository to your desktop, you can open the included index.html file to preview this notes system in your browser to get a better idea of it, but I also included an example of what it might look like here on this site in case you just want to see it in action:
 
-<a href="{{ site.baseurl }}/notes-to-website/" class="link-turncoat link-turncoat--standalone">View notes-to-website example site</a>
+<a href="/notes-to-website/" class="link-turncoat link-turncoat--standalone">View notes-to-website example site</a>
 
 ***
 

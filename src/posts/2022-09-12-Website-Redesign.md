@@ -30,7 +30,7 @@ My personal website/blog has gone through several iterations over the years.
 
 This blog started in 2016 strictly as a book blog. I've never really posted *reviews* on this blog so much as I shared my thoughts about what I was reading. I read a lot, I have lots of thoughts about what I read, and I like to write, so I started chronicling my book thoughts on a simple WordPress blog, often sharing links to particular posts with my book-loving friends.
 
-In 2017, [I migrated from WordPress to Jekyll](/2017/04/27/new-blog-new-website/). At that time, I was starting to submit poetry for publication, and I wanted to have a more formal presence online, with my own domain. I decided to use Jekyll because I could host it for free with [GitHub Pages](https://pages.github.com/), because I'm a computer nerd who likes creating websites, and because, as a static site generator, it was generally faster and more secure than WordPress. This was my first experience using Jekyll, so I used [Jekyll Now](https://www.jekyllnow.com/) as my training wheels to help me structure the site. It wasn't a pretty site, but it was clean, functional, and free for me to host. It was around this point that I switched over from publishing blog posts about individual books to publishing "[recent reading]({{ site.baseurl}}/Blog/Tags/#recent+reading)" or "[year in review]({{ site.baseurl }}/Blog/Tags/#year+in+review)" roundups.
+In 2017, [I migrated from WordPress to Jekyll](/2017/04/27/new-blog-new-website/). At that time, I was starting to submit poetry for publication, and I wanted to have a more formal presence online, with my own domain. I decided to use Jekyll because I could host it for free with [GitHub Pages](https://pages.github.com/), because I'm a computer nerd who likes creating websites, and because, as a static site generator, it was generally faster and more secure than WordPress. This was my first experience using Jekyll, so I used [Jekyll Now](https://www.jekyllnow.com/) as my training wheels to help me structure the site. It wasn't a pretty site, but it was clean, functional, and free for me to host. It was around this point that I switched over from publishing blog posts about individual books to publishing "[recent reading]({{ site.baseurl}}/Blog/Tags/#recent+reading)" or "[year in review](/Blog/Tags/#year+in+review)" roundups.
 
 <figure>
     <img alt="Screenshot of a simple blog with one column, no images, and black text upon a white background." width="3172" height="1536" src="/assets/images/Coulter-oldBlog.png">
@@ -39,7 +39,7 @@ In 2017, [I migrated from WordPress to Jekyll](/2017/04/27/new-blog-new-website/
 
 In 2019, I taught myself the Bootstrap framework, and [I used Bootstrap to redesign my Jekyll site](/2019/03/02/website-redesign/). It was still a simple site overall, but it looked a little more modern and it was no longer so starkly bland. At this point, I started adding a featured image to accompany each post.
 
-In 2020, I started learning about and falling in love with web accessibility. I started [blogging about accessibility]({{ site.baseurl }}/Blog/Categories/#accessibility) on this site, and I conducted a simple [accessibility audit and remediation project](/2020/11/30/a11y-updates/) to improve this site.
+In 2020, I started learning about and falling in love with web accessibility. I started [blogging about accessibility](/Blog/Categories/#accessibility) on this site, and I conducted a simple [accessibility audit and remediation project](/2020/11/30/a11y-updates/) to improve this site.
 
 <figure>
     <img alt="Screenshot of a simple blog with a green header bar, a welcome message, a sidebar with Read More, Categories, and Recent Posts headings. A recent post's title, date, and featured image are visible." width="3200" height="1566" src="/assets/images/Coulter-blog-02.png" sizes="(min-width: 65rem) 65rem, 100vw">
@@ -69,7 +69,7 @@ This site is now much more accessible. I believe it conforms to the Web Content 
 
 This website is now [REUSE-compliant](https://reuse.software/), which means that the copyright holder and license are explicitly indicated for each file in the codebase.
 
-On the [About This Site]({{ site.baseurl }}/About-This-Site/) page, I have added a privacy policy and greatly expanded and improved the accessibility statement and copyright statement.
+On the [About This Site](/About-This-Site/) page, I have added a privacy policy and greatly expanded and improved the accessibility statement and copyright statement.
 
 Also, I switched over to hosting with [Netlify](https://www.netlify.com/) rather than with GitHub Pages.
 

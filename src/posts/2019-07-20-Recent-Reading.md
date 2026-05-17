@@ -88,7 +88,7 @@ I really want to read the (yet-to-be-published) next book in this series.
 
 <p class="bookinfo">Washington Square Press, 1998.</p>
 
-This is a collection of interrelated short stories about Socrates Fortlow, an ex-con living in Los Angeles and trying to be a good person even though he knows he isn't one. Socrates reminds me of Amos from [James S.A. Corey's <cite>The Expanse</cite> series]({{ site.baseurl }}/Blog/Tags/#James+S.A.+Corey) --- both Socrates and Amos are traumatized killers trying to be good. They're both really compelling characters who raise big, intriguing questions: what is it to be good? When evaluating a person's goodness, how do we balance character, actions, and history?
+This is a collection of interrelated short stories about Socrates Fortlow, an ex-con living in Los Angeles and trying to be a good person even though he knows he isn't one. Socrates reminds me of Amos from [James S.A. Corey's <cite>The Expanse</cite> series](/Blog/Tags/#James+S.A.+Corey) --- both Socrates and Amos are traumatized killers trying to be good. They're both really compelling characters who raise big, intriguing questions: what is it to be good? When evaluating a person's goodness, how do we balance character, actions, and history?
 
 Walter Mosley writes really great prose. This book alternates between simple and straightforward third-person narration and really gorgeous, really readable dialect.
 

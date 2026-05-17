@@ -22,7 +22,7 @@ So what's up with that, you ask?
 
 I've decided that I want to start submitting poetry for publication, and before I do that, I wanted to set up a website and mailing list. It made sense to migrate the blog over to the new website.
 
-As the [About This Site]({{ site.baseurl }}/About-This-Site/) page will tell you, this website is powered by [Jekyll](https://jekyllrb.com/) with the theme [Jekyll Now](http://www.jekyllnow.com/) and hosted on [Github](https://github.com/cncoulter/cncoulter.github.io) thanks to [Github Pages](https://pages.github.com/). But what all does that mean?
+As the [About This Site](/About-This-Site/) page will tell you, this website is powered by [Jekyll](https://jekyllrb.com/) with the theme [Jekyll Now](http://www.jekyllnow.com/) and hosted on [Github](https://github.com/cncoulter/cncoulter.github.io) thanks to [Github Pages](https://pages.github.com/). But what all does that mean?
 
 Jekyll is a static site generator. You give it some config files and a bunch of markdown files, and Jekyll generates a static website; that is, a website made up of HTML and CSS files and the like --- no server-side scripting or databases. There are [tons](http://jekyllthemes.org/) of themes you can use to make your Jekyll website look pretty with relatively little work, and it's also fairly straightforward to customize the structure and style of your site. I started with the Jekyll Now theme and then tweaked it for my needs, adding a landing page, a blog archives page, and more.
 

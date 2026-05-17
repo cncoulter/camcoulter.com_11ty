@@ -37,7 +37,7 @@ Thanks to Bootstrap, my website/blog is now responsive, so it'll look nice wheth
 
 I added color and photos to the blog, simple design basics that I had neglected before. They do a lot of good, go figure.
 
-I've added support for both [categories]({{ site.baseurl }}/Blog/Categories) and [tags]({{ site.baseurl }}/Blog/Tags).
+I've added support for both [categories](/Blog/Categories) and [tags](/Blog/Tags).
 
 I also added support for [Twitter cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards), so that when I post blog links on Twitter, Twitter adds a nice little box with the post's featured image and an excerpt. Like so:
 
@@ -50,7 +50,7 @@ And, of course, in the process of redesigning the website, I also made lots of o
 
 ## Forking My Website/Blog
 
-[This website/blog]({{ site.baseurl }}/About-This-Site/) is powered by Jekyll and [hosted](https://github.com/cncoulter/cncoulter.github.io) for free on Github thanks to [Github Pages](https://pages.github.com/).
+[This website/blog](/About-This-Site/) is powered by Jekyll and [hosted](https://github.com/cncoulter/cncoulter.github.io) for free on Github thanks to [Github Pages](https://pages.github.com/).
 
 It's a pretty sweet setup because it means: I don't pay hosting fees; the website is super easy to backup; it's easy to host elsewhere if I decide to ditch Github. Also, I was able to set up a custom email and email forwarding for free through Google Domains.
 

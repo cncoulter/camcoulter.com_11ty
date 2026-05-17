@@ -8,9 +8,11 @@ Content:
 
 * Posts
     * ~~Add blog posts (without images)~~
-    * Add blog posts (with images)
-    * Make sure you don't have any "{{ site.baseurl }}" issues in your blog posts
+    * ~~Add blog posts (with images)~~
+    * ~~Make sure you don't have any "{{ site.baseurl }}" issues in your blog posts~~
     * Add featured images
+    * Configure tags & categories pages
+    * See if you need to update any tag/cat links (e.g.: [100 Days of A11y](/Blog/Tags/#100+Days+of+A11y))
 * Pages
     * Update homepage
     * Pretty up and fix About
@@ -18,7 +20,13 @@ Content:
 * Images
     * Update default image
     * Add headshot to About
-    * Add images for blog and stuff
+    * Sort out featured images
+    * Update code for posts with images
+        * 2019-03-02 Website Redesign
+        * 2019-06-03 Ebook Design Project
+        * 2022-09-12 Website Redesign
+* Projects
+    * Sort out notes-to-website
 * Publications
     * Self-host Our Daily Beard podcast interview
     

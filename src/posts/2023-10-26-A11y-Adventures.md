@@ -16,7 +16,7 @@ image: refreshable-braille
 
 ## CPACC + WAS = CPWA
 
-The International Association of Accessibility Professionals (IAAP) offers several different professional certifications. Back in 2021, I became a Certified Professional in Accessibility Core Compentencies (CPACC), and I wrote a blog series on this site to help me study for it: [100 Days of A11y]({{ site.baseurl }}/Blog/Tags/#100+Days+of+A11y). Recently, I earned another certification from IAAP: Web Accessibility Specialist (WAS)!
+The International Association of Accessibility Professionals (IAAP) offers several different professional certifications. Back in 2021, I became a Certified Professional in Accessibility Core Compentencies (CPACC), and I wrote a blog series on this site to help me study for it: [100 Days of A11y](/Blog/Tags/#100-Days-of-A11y). Recently, I earned another certification from IAAP: Web Accessibility Specialist (WAS)!
 
 CPACC is more of a generalist, non-technical certification. It's appropriate for all sorts of people whose roles touch on either digital or physical accessibility. Perhaps you are involved in setting policy, perhaps you work with various customers or clients, or perhaps you create things for people to use --- the CPACC certification is relevant for all of those roles.
 
