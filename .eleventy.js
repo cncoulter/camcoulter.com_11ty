@@ -199,6 +199,21 @@ module.exports = async function (eleventyConfig) {
 		return relevantPages;
 	});
 
+	// Create the filter: findImage
+	// Given collections.images and an image's title
+	// Returns an array with all pages in collections.images that have title set to given image title in their front matter. (Ideally, it returns an array of one. If the array includes multiple pages, ensure all title values in the images collection are unique.)
+	// Example Use: {% for item in collections.images | findImage(image) %}
+	// Example Return: an array of all pages that have image: image (ideally an array of one)
+	eleventyConfig.addFilter("findImage", function(images, image) {
+		const relevantPages = [];
+		images.forEach((item) => {
+			if (item.data.title === image) {
+				relevantPages.push(item);
+			}
+		});
+		return relevantPages;
+	});
+
 	// |------------|
 	// | Shortcodes |
 	// |------------|

@@ -5,7 +5,8 @@
 	"author": "Cam Coulter",
 	"rights": "&copy; Cam Coulter 2026",
 	"defaultImage": {
-		"url": "/assets/images/desk-keyboard-notebook.jpg",
-		"alt": "A keyboard, a notebook, headphones, and a cup of coffee rest upon a wooden desk."
+		"src": "/assets/images/desk-keyboard-notebook.jpg",
+		"alt": "A keyboard, a notebook, headphones, and a cup of coffee rest upon a wooden desk.",
+		"caption": "Photo by <a href=\"https://unsplash.com/@goumbik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Lukas Blazek</a> on <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
 	}
 }

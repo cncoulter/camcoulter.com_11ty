@@ -21,7 +21,7 @@ image: code-01
 Over the last two months, I taught myself the [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) framework for web development, and I used it to redesign my website/blog. This project [was on my to-do list](/2017/04/27/new-blog-new-website/) since April 2017, and I'm glad that I had the chance to get it done this season. The blog looks much better now.
 
 <figure>
-    <img alt="Screenshot of a simple blog with one column, no images, and black text upon a white background." width="3172" height="1536" src="/assets/images/Coulter-oldBlog.png">
+    <img alt="Screenshot of a simple blog with one column, no images, and black text upon a white background." src="/assets/images/Coulter-oldBlog.png" sizes="(min-width: 65rem) 65rem, 100vw" eleventy:formats="png" style="width: 100%;">
 	<figcaption>My blog's homepage, circa 2019.</figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ I've added support for both [categories](/Blog/Categories) and [tags](/Blog/Tags
 I also added support for [Twitter cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards), so that when I post blog links on Twitter, Twitter adds a nice little box with the post's featured image and an excerpt. Like so:
 
 <figure>
-    <img alt="Twitter screenshot showing a link displayed as a card with a title, description, and image." width="588" height="303" src="/assets/images/Coulter-TwitterCard.png">
+    <img alt="Twitter screenshot showing a link displayed as a card with a title, description, and image." src="/assets/images/Coulter-TwitterCard.png" sizes="(min-width: 65rem) 65rem, 100vw" eleventy:formats="png" style="width: 70%;">
 	<figcaption>Here's a pretty Twitter card that now shows up when I post links to my blog.</figcaption>
 </figure>
 

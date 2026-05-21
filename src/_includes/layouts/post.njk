@@ -6,6 +6,21 @@ layout: layouts/base.njk
 
 <p class="lead">{{ description | safe }}</p>
 
+<!-- Featured Image -->
+{% if image %} {# If the post has a featured image, use that. #}
+	{% for item in collections.images | findImage(image) %}
+		<figure class="full-width doNotPrint">
+			<img alt="{{ item.data.alt }}" src="{{ item.data.src }}" sizes="(min-width: 65rem) 65rem, 100vw">
+			<figcaption>{{ item.content | safe }}</figcaption>
+		</figure>
+	{% endfor %}
+{% else %} {# Otherwise, fall back to our default image. #}
+	<figure class="full-width doNotPrint">
+		<img alt="{{ meta.defaultImage.alt }}" src="{{ meta.defaultImage.src }}" sizes="(min-width: 65rem) 65rem, 100vw">
+		<figcaption>{{ meta.defaultImage.caption | safe }}</figcaption>
+	</figure>
+{% endif %}
+
 <ul class="post-metadata">
 	{% if author %}{% for item in collections.people | personIs(author) %}<li>Author: <a href="/people/{{ item.data.title | slugify }}/">{{ item.data.title }}</a>.</li>{% endfor %}{% endif %}
 	{% if date %}<li>Posted on: <time datetime="{{ date | machineReadable }}">{{ date | humanReadableDateTime }}</time>.</li>{% endif %}

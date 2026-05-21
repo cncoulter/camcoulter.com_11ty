@@ -33,7 +33,7 @@ This blog started in 2016 strictly as a book blog. I've never really posted *rev
 In 2017, [I migrated from WordPress to Jekyll](/2017/04/27/new-blog-new-website/). At that time, I was starting to submit poetry for publication, and I wanted to have a more formal presence online, with my own domain. I decided to use Jekyll because I could host it for free with [GitHub Pages](https://pages.github.com/), because I'm a computer nerd who likes creating websites, and because, as a static site generator, it was generally faster and more secure than WordPress. This was my first experience using Jekyll, so I used [Jekyll Now](https://www.jekyllnow.com/) as my training wheels to help me structure the site. It wasn't a pretty site, but it was clean, functional, and free for me to host. It was around this point that I switched over from publishing blog posts about individual books to publishing "[recent reading]({{ site.baseurl}}/Blog/Tags/#recent+reading)" or "[year in review](/Blog/Tags/#year+in+review)" roundups.
 
 <figure>
-    <img alt="Screenshot of a simple blog with one column, no images, and black text upon a white background." width="3172" height="1536" src="/assets/images/Coulter-oldBlog.png">
+    <img alt="Screenshot of a simple blog with one column, no images, and black text upon a white background." src="/assets/images/Coulter-oldBlog.png" sizes="(min-width: 65rem) 65rem, 100vw" eleventy:formats="png" style="width: 100%;">
 	<figcaption>My blog's homepage, circa 2019.</figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ In 2019, I taught myself the Bootstrap framework, and [I used Bootstrap to redes
 In 2020, I started learning about and falling in love with web accessibility. I started [blogging about accessibility](/Blog/Categories/#accessibility) on this site, and I conducted a simple [accessibility audit and remediation project](/2020/11/30/a11y-updates/) to improve this site.
 
 <figure>
-    <img alt="Screenshot of a simple blog with a green header bar, a welcome message, a sidebar with Read More, Categories, and Recent Posts headings. A recent post's title, date, and featured image are visible." width="3200" height="1566" src="/assets/images/Coulter-blog-02.png" sizes="(min-width: 65rem) 65rem, 100vw">
+    <img alt="Screenshot of a simple blog with a green header bar, a welcome message, a sidebar with Read More, Categories, and Recent Posts headings. A recent post's title, date, and featured image are visible." src="/assets/images/Coulter-blog-02.png" sizes="(min-width: 65rem) 65rem, 100vw" eleventy:formats="png" style="width: 100%;">
 	<figcaption>My blog's homepage, circa January 2022.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ I am still using Jekyll to knit this site together. I like Jekyll.
 However, I am no longer using Bootstrap (or any other framework) to style or design the site, and I am no longer using Jekyll Now or even any Jekyll themes. Instead, I have written pretty much all the code myself, using vanilla HTML and CSS.
 
 <figure>
-    <img alt="Screenshot of a simple website with a navigation list, a welcome message, and a list of recent posts. The site has a black background, white text, and green links." width="3200" height="1566" src="/assets/images/Coulter-blog-03.jpg" sizes="(min-width: 65rem) 65rem, 100vw">
+    <img alt="Screenshot of a simple website with a navigation list, a welcome message, and a list of recent posts. The site has a black background, white text, and green links." src="/assets/images/Coulter-blog-03.jpg" sizes="(min-width: 65rem) 65rem, 100vw" style="width: 100%;">
 	<figcaption>My blog's (dark mode) homepage, circa September 2022.</figcaption>
 </figure>
 

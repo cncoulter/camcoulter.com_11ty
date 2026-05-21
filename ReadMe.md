@@ -10,7 +10,7 @@ Content:
     * ~~Add blog posts (without images)~~
     * ~~Add blog posts (with images)~~
     * ~~Make sure you don't have any "{{ site.baseurl }}" issues in your blog posts~~
-    * Add featured images
+    * ~~Add featured images~~
     * Configure tags & categories pages
     * See if you need to update any tag/cat links (e.g.: [100 Days of A11y](/Blog/Tags/#100+Days+of+A11y))
 * Pages
