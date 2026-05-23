@@ -17,10 +17,6 @@
             "url": "/blog/"
         },
         {
-            "label": "People",
-            "url": "/people/"
-        },
-        {
             "label": "Publications & More",
             "url": "/publications/"
         }
