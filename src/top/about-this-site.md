@@ -1,6 +1,9 @@
 ---
+SPDX-FileCopyrightText: 2026 Cam Coulter <git@camcoulter.com>
+SPDX-License-Identifier: CC-BY-NC-ND-4.0
 layout: layouts/page.njk
 title: About This Site
+permalink: /about-this-site/
 ---
 
 [INSERT_TOC]

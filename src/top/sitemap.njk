@@ -6,14 +6,6 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- created with help from https://www.sitemaps.org/ -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	{% for page in collections.top %}<url>
-		<loc>{{ meta.url }}{{ page.url }}</loc>
-	</url>
-	{% endfor %}
-	{% for page in collections.blog %}<url>
-		<loc>{{ meta.url }}{{ page.url }}</loc>
-	</url>
-	{% endfor %}
 	{% for page in collections.post %}<url>
 		<loc>{{ meta.url }}{{ page.url }}</loc>
 	</url>

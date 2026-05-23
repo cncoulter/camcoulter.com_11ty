@@ -1,0 +1,51 @@
+---
+layout: layouts/page.njk
+title: Site Map
+permalink: /sitemap/
+---
+
+[INSERT_TOC]
+
+<h2>Pages</h2>
+
+<ul>
+	<li><a href="/">Blog</a> (Homepage)
+		<ul>
+			<li><a href="/blog/archive/">Blog Archive</a></li>
+			<li><a href="/blog/categories/">Category Index</a></li>
+			<li><a href="/blog/tags/">Tag Index</a></li>
+			<li><a href="/blog/subscribe/">Subscribe</a>
+				<ul>
+					<li><a href="/feed.xml">Atom Feed</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href="/about/">About</a></li>
+	<li><a href="/projects/">Projects</a></li>
+	<li><a href="/publications/">Publications & More</a></li>
+	<li><a href="/about-this-site/">About This Site</a>
+		<ul>
+			<li><a href="/about-this-site/design-guide/">Design Guide</a></li>
+		</ul>
+	</li>
+	<li><a href="/sitemap/">Site Map</a>
+		<ul>
+			<li><a href="/sitemap.xml">XML Site Map</a></li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Posts</h2>
+
+<ol reversed>
+{% for post in collections.post | reverse %}
+	<li><time datetime="{{ post.date | machineReadable }}">{{ post.date | humanReadableDate }}</time>: <a href="{{ post.url }}">{{ post.data.title | safe }}</a></li>
+{% endfor %}
+</ol>
+
+<aside>
+	<h2>XML Site Map (For Robots)</h2>
+	<p>Are you a robot looking for an XML site map? You've come to the right place.</p>
+	<a href="/sitemap.xml" class="link-turncoat link-turncoat--standalone">{% include "partials/SVGs/map.svg" %} XML Site Map</a>
+</aside>

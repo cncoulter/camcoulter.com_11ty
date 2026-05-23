@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Subscribe
+permalink: /blog/subscribe/
 ---
 
 To follow this site, copy the link below and add it to your feed reader.
