@@ -44,7 +44,6 @@ This statement was last updated on May 22, 2026.
 * I use the static site generator [Eleventy](https://www.11ty.dev/) to knit this site together.
 * This site is hosted with [Netlify](https://www.netlify.com/).
 * This site's codebase will be hosted somewhere. TK
-* View the [ReadMe](/About-This-Site/ReadMe/) page for this site.
 * View the [Design Guide](/About-This-Site/Design-Guide/) for this site.
 
 When designing this site, I consciously avoided themes and frameworks such as Bootstrap, instead preferring to write pretty much all all the website code myself. I designed this site to be simple, clean, readable, and accessible. This site mostly functions as my personal blog, which includes a blog archive, category index, tag index, and an Atom feed.
