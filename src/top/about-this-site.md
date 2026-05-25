@@ -67,6 +67,6 @@ This website uses the [Source Serif](https://github.com/adobe-fonts/source-serif
 
 This website uses [Bootstrap icons](https://icons.getbootstrap.com/) for SVG icons, an open-source icon library released under the MIT license.
 
-This website's favicon is the memo emoji from the open-source project [Twemoji](https://twemoji.twitter.com/). The graphic is copyright 2020 Twitter, Inc and other contributors, and it's licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Thanks to [favicon.io](https://favicon.io/) for making it easy.
+This website's favicon is the memo emoji from the open-source project [Twemoji](https://github.com/twitter/twemoji). The graphic is copyright 2020 Twitter, Inc and other contributors, and it's licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Thanks to [favicon.io](https://favicon.io/) for making it easy.
 
 The [robots.txt](/robots.txt) file is [thanks to Neil Clarke](https://neil-clarke.com/block-the-bots-that-feed-ai-models-by-scraping-your-website/), and the [ai.txt](/ai.txt) is [thanks to spawning.ai](https://site.spawning.ai/spawning-ai-txt).
