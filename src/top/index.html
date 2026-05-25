@@ -1,12 +1,52 @@
 ---
-layout: layouts/page.njk
-title: Home
+SPDX-FileCopyrightText: 2026 Cam Coulter <git@camcoulter.com>
+SPDX-License-Identifier: CC-BY-SA-4.0
+layout: layouts/base.njk
+title: Blog
 permalink: /
 ---
 
-<p>{{ meta.siteDescription }}</p>
+<h1 id="main-content" tabindex="-1">Hello!</h1>
 
-<figure>
-	<img src="/assets/images/desk-keyboard-notebook.jpg" alt="A keyboard, a notebook, headphones, and a cup of coffee rest upon a wooden desk." style="margin: auto; width: 100%;">
-	<figcaption style="text-align: center;">Photo by <a href="https://unsplash.com/@goumbik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lukas Blazek</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
-</figure>
+<div class="font_sans raised">
+	<p>I'm a writer and accessibility nerd, among other things, and I think a lot about ethical technology, speculative fiction, and intentional community.</p>
+	<p>I write about science fiction and fantasy for <cite>Skiffy and Fanty</cite>, and I blog about social justice, simple living, community, and spirituality for <cite>The Ruined Report</cite>. I also blog on this site, usually about books or accessibility.</p>
+	<p>Online, I'm more of a “blogs & email” person than a “social media” person, although you can <a rel="me" href="https://fosstodon.org/@camcoulter">find me on Mastodon</a>. If you like what I write, <a href="/blog/subscribe/">subscribe to my blog</a> or <a href="/about/#contact">send me an email</a> and say hi. Thanks for stopping by!</p>
+</div>
+
+<h2>Recent Posts</h2>
+
+<div class="recent-posts">
+	{% for post in collections.post.slice(0, 6) %}
+		<div class="recent-post">
+			<h3 class="recent-post_title h4"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+			<p class="recent-post_description">{{ post.data.description }}</p>
+			<!-- The image displays first, but logically it comes after the heading, so we're putting it here after the heading and description and then using CSS to change the display order. That's not really necessary in this case since we're marking the image as decorative, but it's a good practice in general for card components like this one, so we're keeping it like this. -->
+			{% if post.data.image %} {# If the post has a featured image, use that. #}
+				{% for item in collections.images | findImage(post.data.image) %}
+					<figure class="full-width doNotPrint">
+						<img alt="" src="{{ item.data.src }}" sizes="(min-width: 21rem) 21rem, 100vw">
+					</figure>
+				{% endfor %}
+			{% else %} {# Otherwise, fall back to our default image. #}
+				<figure class="full-width doNotPrint">
+					<img alt="" src="{{ meta.defaultImage.src }}" sizes="(min-width: 21rem) 21rem, 100vw">
+				</figure>
+			{% endif %}
+			<p class="recent-post_date">{% include "partials/SVGs/calendar3.svg" %} <span class="visually-hidden">Posted on</span> <time datetime="{{ post.date | machineReadable }}">{{ post.date | humanReadableDate }}</time>
+			</p>
+		</div>
+	{% endfor %}
+</div>
+
+<aside>
+	<section class="read-more">
+		<h2>Read More</h2>
+		<ul class="link-turncoat--list">
+			<li><a href="/Blog/Archive/" class="link-turncoat">{% include "partials/SVGs/archive.svg" %} Blog Archive</a></li>
+			<li><a href="/Blog/Categories/" class="link-turncoat">{% include "partials/SVGs/folder.svg" %} Category Index</a></li>
+			<li><a href="/Blog/Tags/" class="link-turncoat">{% include "partials/SVGs/tag.svg" %} Tag Index</a></li>
+			<li><a href="/Blog/Subscribe/" class="link-turncoat">{% include "partials/SVGs/rss.svg" %} Subscribe</a></li>
+		</ul>
+	</section>
+</aside>
