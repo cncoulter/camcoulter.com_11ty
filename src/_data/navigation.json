@@ -1,20 +1,16 @@
 {
     "headerLinks": [
         {
-            "label": "Home",
-            "url": "/"
-        },
-        {
             "label": "About",
             "url": "/about/"
         },
         {
-            "label": "Projects",
-            "url": "/projects"
-        },
-        {
             "label": "Blog",
             "url": "/blog/"
+        },
+        {
+            "label": "Projects",
+            "url": "/projects"
         },
         {
             "label": "Publications & More",
