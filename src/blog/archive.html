@@ -9,7 +9,7 @@ title: Blog Archive
 	<li><a href="/blog/subscribe/" class="link-turncoat">{% include "partials/SVGs/rss.svg" %} Subscribe</a></li>
 </ul>
 
-{% for post in collections.post %}
+{% for post in collections.post | reverse %}
 
 	{% include "partials/post-metadata.html" %}
     {% if not loop.last %}<hr>{% endif %}

@@ -17,10 +17,10 @@ permalink: /
 <h2>Recent Posts</h2>
 
 <div class="recent-posts">
-	{% for post in collections.post.slice(0, 6) %}
+	{% for post in collections.post.reverse().slice(0, 6) %}
 		<div class="recent-post">
-			<h3 class="recent-post_title h4"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-			<p class="recent-post_description">{{ post.data.description }}</p>
+			<h3 class="recent-post_title h4"><a href="{{ post.url }}">{{ post.data.title | safe }}</a></h3>
+			<p class="recent-post_description">{{ post.data.description | safe }}</p>
 			<!-- The image displays first, but logically it comes after the heading, so we're putting it here after the heading and description and then using CSS to change the display order. That's not really necessary in this case since we're marking the image as decorative, but it's a good practice in general for card components like this one, so we're keeping it like this. -->
 			{% if post.data.image %} {# If the post has a featured image, use that. #}
 				{% for item in collections.images | findImage(post.data.image) %}
