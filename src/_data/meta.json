@@ -4,6 +4,7 @@
 	"siteDescription": "Cam Coulter is a writer and accessibility nerd, among other things. They work as a digital accessibility consultant, and they think incessantly about ethical technology, speculative fiction, and intentional community.",
 	"author": "Cam Coulter",
 	"rights": "&copy; Cam Coulter 2016–2026",
+	"defaultKeyboards": "blog, accessibility, technology, science fiction, fantasy",
 	"defaultImage": {
 		"src": "/assets/images/desk-keyboard-notebook.jpg",
 		"alt": "A keyboard, a notebook, headphones, and a cup of coffee rest upon a wooden desk.",

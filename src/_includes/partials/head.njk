@@ -3,13 +3,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noai, noimageai"> <!-- https://neil-clarke.com/block-the-bots-that-feed-ai-models-by-scraping-your-website/ -->
 	<meta name="generator" content="{{ eleventy.generator }}">
+
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-	<link rel="alternate" type="application/atom+xml" title="Atom feed for {{ meta.siteName }}" href="/feed.xml">
+	<link rel="alternate" type="application/atom+xml" title="Atom feed for Cam Coulter's blog" href="/feed.xml">
 
 	<title>{{ pageTitle | safe }}</title>
-	<meta name="description" content="{{ pageDescription }}">
+	<meta name="description" content="{{ pageDescription | safe }}">
 	<meta name="author" content="{{ meta.author }}">
+	{% if categorizedUnder or taggedWith%}<meta name="keywords" content="{% for item in categorizedUnder | sort %}{{ item  }}, {% endfor %}{% for item in taggedWith | sort %}{{ item  }}{% if not loop.last %}, {% endif %}{% endfor %}">{% else %}<meta name="keywords" content="{{ meta.defaultKeyboards }}">{% endif %}	
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,27 +27,58 @@
 
 	<!-- Open Graph Protocol -->
 	<!-- https://ogp.me/     -->
-	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="{{ meta.siteName }}">
+	<meta property="og:title" content="{{ pageTitle | safe }}">
+	<meta property="og:description" content="{{ pageDescription | safe }}">
 	<meta property="og:locale" content="en-US">
-	<meta property="og:image" content="{{ meta.url }}{{ meta.defaultImage.url }}">
-	<meta property="og:image:alt" content="{{ meta.defaultImage.alt }}">
 	<meta property="og:url" content="{{ meta.url }}{{ page.url }}">
-	<meta property="og:title" content="{{ pageTitle }}">
-	<meta property="og:description" content="{{ pageDescription }}">
+	{% if layout == "layouts/post.njk" %}<meta property="og:type" content="article">
+	<meta property="article:author" content="{{ meta.author }}">
+	{% if date %}<meta property="article:published_time" content="{{ date | machineReadable }}">{% endif %}
+	{% if date_modified %}<meta property="article:modified_time" content="{{ date_modified | machineReadable }}">{% endif %}
+	{% if taggedWith %}<meta property="article:tag" content="{% for item in taggedWith | sort %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}">{% endif %}
+	{% else %}<meta property="og:type" content="website">{% endif %}
+	{% if image %}{% for item in collections.images | findImage(image) %}<meta property="og:image" content="{{ meta.url }}{{ item.data.src | metaPrep }}">
+	<meta property="og:image:alt" content="{{ item.data.alt }}">{% endfor %}
+	{% else %}<meta property="og:image" content="{{ meta.url }}{{ meta.defaultImage.src | metaPrep }}">
+	<meta property="og:image:alt" content="{{ meta.defaultImage.alt }}">{% endif %}
 
 	<!-- Twitter Cards -->
 	<!-- https://developer.x.com/en/docs/x-for-websites/cards/ -->
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="{{ pageTitle }}">
-	<meta name="twitter:description" content="{{ pageDescription }}">
-	<meta name="twitter:image" content="{{ meta.url }}{{ meta.defaultImage.url }}">
-	<meta name="twitter:image:alt" content="{{ meta.defaultImage.alt }}">
+	<meta name="twitter:title" content="{{ pageTitle | safe }}">
+	<meta name="twitter:description" content="{{ pageDescription | safe }}">
+	{% if image %}{% for item in collections.images | findImage(image) %}<meta property="twitter:image" content="{{ meta.url }}{{ item.data.src | metaPrep }}">
+	<meta property="twitter:image:alt" content="{{ item.data.alt }}">{% endfor %}
+	{% else %}<meta name="twitter:image" content="{{ meta.url }}{{ meta.defaultImage.src | metaPrep }}">
+	<meta name="twitter:image:alt" content="{{ meta.defaultImage.alt }}">{% endif %}
 	
 	<!-- JSON-LD -->
-	<!-- want to add this someday
+	<!-- 
 	- https://json-ld.org/
 	- https://jsonld.com/
 	-->
-	
+	{% if layout == "layouts/post.njk" %}<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "BlogPosting",
+		"url": "{{ meta.url }}{{ page.url }}",
+		"inLanguage": "en-US",
+		"headline": "{{ pageTitle | safe }}",
+		"description": "{{ pageDescription }}",
+		{% if categorizedUnder %}"articleSection": [{% for item in categorizedUnder | sort %}"{{ item }}"{% if not loop.last %}, {% endif %}{% endfor %}],{% endif %}
+		{% if taggedWith %}"keywords": [{% for item in taggedWith | sort %}"{{ item }}"{% if not loop.last %}, {% endif %}{% endfor %}],{% endif %}
+		"datePublished": "{{ date | machineReadable }}",
+		"dateModified": "{% if date_modified %}{{ date_modified | machineReadable }}{% else %}{{ date | machineReadable }}{% endif %}",
+		"author": {
+			"@type": "Person",
+			"name": "{{ meta.author }}",
+			"url": "{{ meta.url }}"
+		},
+		"image": {
+			"@type": "ImageObject",
+			"url": "{{ meta.url }}{% for item in collections.images | findImage(image) %}{{ item.data.src | metaPrep }}{% endfor %}"
+		}
+	</script>{% endif %}
+
 </head>

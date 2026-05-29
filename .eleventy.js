@@ -214,6 +214,20 @@ module.exports = async function (eleventyConfig) {
 		return relevantPages;
 	});
 
+	// Create the filter: metaPrep
+	// Given a filepath for an image,
+	// Returns an updated filepath for the image.
+	// Makes it end with "-300.jpeg"
+	// We use this because the images plugin will name our images in this way.
+	eleventyConfig.addFilter("metaPrep", function(filePath) {
+		// Safety check: ensure we actually have a string to work with
+		if (!filePath || typeof filePath !== "string") {
+			return filePath;
+		}
+		// Find the final dot and extension, and replace it with "-300.jpeg"
+		return filePath.replace(/\.[^.]+$/, "-300.jpeg");
+	});
+
 	// |------------|
 	// | Shortcodes |
 	// |------------|
