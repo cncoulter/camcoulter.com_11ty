@@ -54,9 +54,9 @@ For more on this, you can check out:
 
 Adrian Roselli has a series of blog posts that I love:
 
-* "[Stop Using ‘Drop-down’](https://adrianroselli.com/2020/03/stop-using-drop-down.html)"
-* "[Stop Using ‘Pop-up’](https://adrianroselli.com/2021/07/stop-using-pop-up.html)"
-* "[Be Careful Using ‘Menu’](https://adrianroselli.com/2023/05/be-careful-using-menu.html)"
+* [Stop Using ‘Drop-down’](https://adrianroselli.com/2020/03/stop-using-drop-down.html)
+* [Stop Using ‘Pop-up’](https://adrianroselli.com/2021/07/stop-using-pop-up.html)
+* [Be Careful Using ‘Menu’](https://adrianroselli.com/2023/05/be-careful-using-menu.html)
 
 The terms "drop-down," "pop-up," and "menu" are common and well-understood. The trouble is, they are also vague and ambiguous. It is fine enough for laypeople to use these terms in casual conversation, but web designers, developers, and accessibility professionals need to be more mindful with our language here. Each of these terms can correspond to several different HTML elements, ARIA roles, and design patterns, each with different purposes and uses. If a designer uses the term "pop-up" to refer to a modal dialog, but the developer thinks they mean a new window, the user experience (and likely accessibility) will suffer. I agree with Adrain Roselli: professionals in this space should beware using these terms and make sure they are being as clear and specific as possible, and if you encounter someone using these terms, consider asking them to resolve their ambiguity.
 

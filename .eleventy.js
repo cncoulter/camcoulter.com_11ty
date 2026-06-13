@@ -50,6 +50,7 @@ module.exports = async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
 	eleventyConfig.addPassthroughCopy("./src/assets/css/");
 	eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
+	eleventyConfig.addPassthroughCopy("./src/assets/ebooks/");
 
 	// Trigger a build when you edit these files.
 	eleventyConfig.addWatchTarget("./src/css/");

@@ -25,13 +25,13 @@ image: books-01
 
 I’ve been reading a lot of short stories recently, so I figured I would group them all together in one post. Here we go.
 
-## “[Beauty](http://www.lightspeedmagazine.com/fiction/beauty/	)” by David Barr Kirtley
+## “Beauty” by David Barr Kirtley
 
-A contemporary, ironic retelling of Beauty and the Beast. It’s a funny delight.
+A [contemporary, ironic retelling of Beauty and the Beast](http://www.lightspeedmagazine.com/fiction/beauty/). It’s a funny delight.
 
-## “[Power Armor: A Love Story](http://www.lightspeedmagazine.com/fiction/power-armor-a-love-story/)” by David Barr Kirtley
+## “Power Armor: A Love Story” by David Barr Kirtley
 
-Another very fun and funny story. It develops very quickly, so to tell you about it might spoil some of the fun. So just go ahead and read it.
+Another [very fun and funny story](http://www.lightspeedmagazine.com/fiction/power-armor-a-love-story/). It develops very quickly, so to tell you about it might spoil some of the fun. So just go ahead and read it.
 
 ## “Torn Apart and Devoured by Lions” by Jeffrey Wells
 

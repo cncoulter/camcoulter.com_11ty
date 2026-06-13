@@ -30,7 +30,7 @@ And yet one story wasn’t abridged: Emilio Sandoz’s. <cite>Children of God</c
 
 I loved the character of Emilio Sandoz, but I also loved all the other characters and wish I had had more time with each of them.
 
-Two things are for sure though. 1) Mary Doria Russell can write some beautiful prose:
+Two things are for sure though. (1) Mary Doria Russell can write some beautiful prose:
 
 <blockquote>
 
@@ -42,4 +42,4 @@ Two things are for sure though. 1) Mary Doria Russell can write some beautiful p
 
 </blockquote>
 
-2) I am sad that my time with all these characters is over. <cite>Children of God</cite> is anchored in interesting characters relating to each other in deeply human ways. I think I’ll now have to go read Russell’s other novels to enjoy her other characters.
+(2) I am sad that my time with all these characters is over. <cite>Children of God</cite> is anchored in interesting characters relating to each other in deeply human ways. I think I’ll now have to go read Russell’s other novels to enjoy her other characters.

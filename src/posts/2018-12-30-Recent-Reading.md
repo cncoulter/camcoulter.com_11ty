@@ -53,9 +53,9 @@ The essays in this book are short, accessible, intelligent, and thought-provokin
 
 I am sure that I will return to these three books in the future. I'd found that reading these books has been a good way for me to break down my assumptions and default routines when it comes to teaching, a good way to pause and reflect on what I really want my teaching to do.
 
-## <a href="https://uncannymagazine.com/issues/uncanny-magazine-issue-twenty-four/"><cite>Uncanny Magazine Issue 23: Disabled People Destroy Science Fiction!</cite></a> edited by Dominik Parisien and Elsa Sjunneson-Henry
+## <cite>Uncanny Magazine Issue 23: Disabled People Destroy Science Fiction!</cite> edited by Dominik Parisien and Elsa Sjunneson-Henry
 
-This special issue of <cite>Uncanny Magazine</cite> is really worth checking out. First off, it's just really good. I especially loved the fiction and the personal essays about disability and SF. Secondly, I don't think we have nearly enough disabled representation or stories that seriously engage disability, so this issue --- which is all about that --- felt like a welcome breath of fresh air.
+[This special issue](https://uncannymagazine.com/issues/uncanny-magazine-issue-twenty-four/) of <cite>Uncanny Magazine</cite> is really worth checking out. First off, it's just really good. I especially loved the fiction and the personal essays about disability and SF. Secondly, I don't think we have nearly enough disabled representation or stories that seriously engage disability, so this issue --- which is all about that --- felt like a welcome breath of fresh air.
 
 Back in November, I [reviewed](https://skiffyandfanty.com/blogposts/reviews/shortfictionreviews/shortfictionreviewseptemberoctober2018/) ["The House on the Moon"](https://uncannymagazine.com/article/the-house-on-the-moon/) by William Alexander, my favorite story in the issue. At the very least, you should go read that.
 

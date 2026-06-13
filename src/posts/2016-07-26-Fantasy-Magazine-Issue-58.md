@@ -32,11 +32,11 @@ Not bad.
 
 An interesting take on superheroes.
 
-## “[The Dryad’s Shoe](http://www.fantasy-magazine.com/new/new-fiction/the-dryads-shoe/)” by T. Kingfisher
+## “The Dryad’s Shoe” by T. Kingfisher
 
 AWESOME.
 
-A reimagining of Cinderella which asks: what if, instead of wanting to go to balls and marry the prince, Cinderella just wanted to garden? This short story examines class, vocation, and gender in fun, interesting ways, and it’s got beautiful dialogue.
+[A reimagining of Cinderella](http://www.fantasy-magazine.com/new/new-fiction/the-dryads-shoe/) which asks: what if, instead of wanting to go to balls and marry the prince, Cinderella just wanted to garden? This short story examines class, vocation, and gender in fun, interesting ways, and it’s got beautiful dialogue.
 
 ## “Drowning in Sky” by Julia August
 
