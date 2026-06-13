@@ -1,6 +1,6 @@
 <footer class="contentinfo">
-	<ul>{% for link in navigation.footerLinks %}
-		<li><a href="{{ link.url }}" {% if link.url === page.url %}aria-current="page"{% endif %}>{{ link.label }}</a></li>
+	<ul class="link-undercover--list">{% for link in navigation.footerLinks %}
+		<li><a class="link-undercover" href="{{ link.url }}" {% if link.url === page.url %}aria-current="page"{% endif %}>{{ link.label }}</a></li>
 	{% endfor %}</ul>
 	<p>{{ meta.rights | safe }}</p>
 </footer>

@@ -1,7 +1,10 @@
 ---
 layout: layouts/page.njk
-title: Blog Tags (Single Page)
+title: Tags
+description: "Here's the tag index for my blog."
 ---
+
+<p>{{ description }}</p>
 
 {# List out all tags #}
 
@@ -14,10 +17,12 @@ title: Blog Tags (Single Page)
 {# For each tag, list out all relevant posts #}
 
 {% for tag in collections.tags %}
-    <h2 id="{{ tag | slugify }}" tabindex="-1">{{ tag }}</h2>
-    <ol reversed>
-        {% for post in collections.taggedPages | taggedWith(tag) | reverse %}
-            {% include "partials/post-item.html" %}
-	    {% endfor %}
-    </ol>
+    <div class="cat-tag-item">
+        <h2 id="{{ tag | slugify }}" tabindex="-1">{{ tag }}</h2>
+        <ol reversed>
+            {% for post in collections.taggedPages | taggedWith(tag) | reverse %}
+                {% include "partials/post-item.html" %}
+    	    {% endfor %}
+        </ol>
+    </div>
 {% endfor %}

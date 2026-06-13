@@ -148,7 +148,9 @@ body {
 	font-weight: normal;
 	font-size: var(--ft-size-base);
 	line-height: 1.5;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 65rem;
+	padding: 0 1rem;
 }
 
 /*
@@ -533,12 +535,6 @@ caption {
 /*
 	## Containers
 */
-.container {
-	margin: 0 auto;
-	max-width: 65rem; /* this affects image sizes attribute */
-	padding: 0 1rem;
-}
-
 .article_container {
 	margin: auto;
 	max-width: 50rem;

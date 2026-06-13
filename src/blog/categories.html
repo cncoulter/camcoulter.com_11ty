@@ -1,7 +1,10 @@
 ---
 layout: layouts/page.njk
 title: Categories
+description: "Here's the category index for my blog."
 ---
+
+<p>{{ description }}</p>
 
 {# List out all categories #}
 
@@ -14,10 +17,12 @@ title: Categories
 {# For each category, list out all relevant posts #}
 
 {% for category in collections.categories %}
-    <h2 id="{{ category | slugify }}" tabindex="-1">{{ category }}</h2>
-    <ol reversed>
-        {% for post in collections.categorizedPages | categorizedUnder(category) | reverse %}
-            {% include "partials/post-item.html" %}
-	    {% endfor %}
-    </ol>
+    <div class="cat-tag-item">
+        <h2 id="{{ category | slugify }}" tabindex="-1">{{ category }}</h2>
+        <ol reversed>
+            {% for post in collections.categorizedPages | categorizedUnder(category) | reverse %}
+                {% include "partials/post-item.html" %}
+            {% endfor %}
+        </ol>
+    </div>
 {% endfor %}

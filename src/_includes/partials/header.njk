@@ -1,12 +1,12 @@
-<header class="banner">
+<header class="banner block-links">
 	<a href="#main-content" class="skip-nav">Skip to Main Content</a>
 	<h2><a href="/">{{ meta.siteName }}</a></h2>
 	<p>thinks incessantly about ethical technology, speculative fiction, and intentional community.</p>
 	<p class="printOnly">This page appears online at: <a href="{{ page.url }}" class="doNotPrintLink">{{ meta.url }}{{ page.url }}</a></p>
 	<nav>
-		<ul>
+		<ul class="primary-nav link-undercover--list">
 			{% for link in navigation.headerLinks %}
-				<li><a href="{{ link.url }}" {% if link.url === page.url %}aria-current="page"{% endif %}>{{ link.label }}</a></li>
+				<li><a class="link-undercover" href="{{ link.url }}" {% if link.url === page.url %}aria-current="page"{% endif %}>{{ link.label }}</a></li>
 			{% endfor %}
 		</ul>
 	</nav>

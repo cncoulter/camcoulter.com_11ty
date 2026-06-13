@@ -6,7 +6,15 @@ title: About This Site
 permalink: /about-this-site/
 ---
 
-[INSERT_TOC]
+<div class="toc">
+  <h2>Contents</h2>
+  <ol id="toc" class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#privacy-policy">Privacy Policy</a></li>
+    <li class="toc-entry toc-h2"><a href="#accessibility-statement">Accessibility Statement</a></li>
+    <li class="toc-entry toc-h2"><a href="#website-design-and-hosting">Website Design &amp; Hosting</a></li>
+    <li class="toc-entry toc-h2"><a href="#copyright">Copyright</a></li>
+  </ol>
+</div>
 
 ## Privacy Policy
 
@@ -38,7 +46,7 @@ Here are some of the tools I'm using to test this site for accessibility:
 * axe DevTools browser extension
 * WebAIM's color contrast checker
 
-If you come across any accessibility or usability issues on this site, please let me know. You can file an issue or email me at contact@camcoulter.com.
+If you come across any accessibility or usability issues on this site, please let me know. You can file an issue on the codebase or email me at contact@camcoulter.com.
 
 This statement was last updated on May 22, 2026.
 

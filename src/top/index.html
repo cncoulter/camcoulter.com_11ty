@@ -24,12 +24,12 @@ permalink: /
 			<!-- The image displays first, but logically it comes after the heading, so we're putting it here after the heading and description and then using CSS to change the display order. That's not really necessary in this case since we're marking the image as decorative, but it's a good practice in general for card components like this one, so we're keeping it like this. -->
 			{% if post.data.image %} {# If the post has a featured image, use that. #}
 				{% for item in collections.images | findImage(post.data.image) %}
-					<figure class="full-width doNotPrint">
+					<figure class="recent-post_image full-width doNotPrint">
 						<img alt="" src="{{ item.data.src }}" sizes="(min-width: 21rem) 21rem, 100vw">
 					</figure>
 				{% endfor %}
 			{% else %} {# Otherwise, fall back to our default image. #}
-				<figure class="full-width doNotPrint">
+				<figure class="recent-post_image full-width doNotPrint">
 					<img alt="" src="{{ meta.defaultImage.src }}" sizes="(min-width: 21rem) 21rem, 100vw">
 				</figure>
 			{% endif %}
