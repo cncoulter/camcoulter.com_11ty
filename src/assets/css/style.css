@@ -501,8 +501,9 @@ figure.full-width img {
 
 .bi { /* Bootstrap Icons */
 	display: inline-block;
-	font-size: inherit;
+	font-size: 1em;
 	height: 1em;
+	width: 1em;
 	overflow: visible;
 	vertical-align: -.125em;
 	padding-inline-end: 0.25em;
