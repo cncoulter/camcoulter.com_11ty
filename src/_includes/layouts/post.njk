@@ -43,7 +43,7 @@ layout: layouts/base.njk
 			<h2 class="visually-hidden">Tagged with</h2>
 			<ul class="link-turncoat--list">
 				{% for item in taggedWith | sort %}
-				<li><a href="{{ site.baseurl }}/blog/tags#{{ item | slugify }}" class="link-turncoat">{% include "partials/SVGs/tag-fill-alt.svg" %}{{ item }}<span class="visually-hidden">(tag)</span></a></li>
+				<li><a href="{{ site.baseurl }}/blog/tags#{{ item | slugify }}" class="link-turncoat">{% include "partials/SVGs/tag-fill-alt.svg" %}{{ item }}<span class="visually-hidden"> (tag)</span></a></li>
 				{% endfor %}
 			</ul>
 			{% endif %}
