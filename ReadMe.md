@@ -16,12 +16,13 @@ To learn more about this website, view [About This Site](https://www.camcoulter.
 
 My personal website/blog has been since 2016. In 2017, I migrated from WordPress to Jekyll. In 2026, I migrated from Jekyll to 11ty. I started this particular repo in 2026 when I switched to 11ty. In that process, I forked [Dozen](https://dozen.camcoulter.com/) to help get things started.
 
-## TODO
-    
-Publishing:
+## To Publish
 
+* Find a place to host
 * REMEMBER to update your git remotes!
-* Update dozen to mention updating your git remote 
+    * Update dozen to mention updating your git remote
+* Check Atom feed
+* Author blog post about it
 
 ## In Progress
 

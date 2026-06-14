@@ -10,15 +10,27 @@ description: "Here are some things I've made."
 <div class="toc">
 	<h2>Contents</h2>
 	<ol>
+		<li><a href="#PersonalWebsiteBlog-11ty">Personal Website/Blog (with 11ty)</a></li>
 		<li><a href="#AnA">Apostrophe and Ampersand</a></li>
 		<li><a href="#Dozen">Dozen</a></li>
 		<li><a href="#notesToWebsite">Notes to Website</a></li>
-		<li><a href="#PersonalWebsiteBlog">Personal Website/Blog</a></li>
+		<li><a href="#PersonalWebsiteBlog-Jekyll">Personal Website/Blog (with Jekyll)</a></li>
 		<li><a href="#AIR">Accessibility Internet Rally (AIR)</a></li>
 		<li><a href="#GraphPaper">Graph Paper</a></li>
 		<li><a href="#ThePlaysofRoswitha">The Plays of Roswitha</a></li>
 	</ol>
 </div>
+
+<h2 id="PersonalWebsiteBlog-11ty" tabindex="-1">Personal Website/Blog (with 11ty)</h2>
+
+<ul class="post_metadata">
+	<li>{% include "partials/SVGs/folder.svg" %} <span class="visually-hidden">Categorized under:</span> <a href="/blog/categories/#web-design">Web Design</a></li>
+	<li>{% include "partials/SVGs/calendar3.svg" %} <span class="visually-hidden">I worked on this:</span> 2026</li>
+</ul>
+
+<p>I migrated my personal blog (this site!) from Jekyll to <a href="https://www.11ty.dev/">Eleventy</a> (11ty) in 2026. I didn't immediately make any significant design changes and instead focused simply on recreating the site with the new static site generator. Rather than editing the existing codebase, I forked Dozen (see below) and then worked from there to import my content and mimic the older Jekyll site. I switched static site generators because Jekyll had stopped working reliably for me and because I had become more enamoured with 11ty.</p>
+
+
 
 <h2 id="AnA" tabindex="-1">Apostrophe and Ampersand</h2>
 
@@ -63,20 +75,22 @@ description: "Here are some things I've made."
 
 
 
-<h2 id="PersonalWebsiteBlog" tabindex="-1">Personal Website/Blog</h2>
+<h2 id="PersonalWebsiteBlog-Jekyll" tabindex="-1">Personal Website/Blog (with Jekyll)</h2>
 
 <ul class="post_metadata">
 	<li>{% include "partials/SVGs/folder.svg" %} <span class="visually-hidden">Categorized under:</span> <a href="/blog/categories/#web-design">Web Design</a>, <a href="/blog/categories/#accessibility">Accessibility</a></li>
-	<li>{% include "partials/SVGs/calendar3.svg" %} <span class="visually-hidden">I worked on this:</span> November 2021 – September 2022</li>
+	<li>{% include "partials/SVGs/calendar3.svg" %} <span class="visually-hidden">I worked on this:</span> 2017, 2019, 2022</li>
 </ul>
 
-<p>I designed and developed this site as my personal website/blog. I used the static site generator Jekyll to knit the site together, and I consciously avoided Jekyll themes and frameworks such as Bootstrap, instead preferring to write pretty much all the website code myself. The site is hosted with Netlify, and the site’s codebase is hosted on GitHub.</p>
+<p>I migrated my personal blog from a simple WordPress site to <a href="https://jekyllrb.com/">Jekyll</a> in 2017. I originally used the <a href="https://github.com/barryclark/jekyll-now">Jekyll Now</a> starter site/theme, but in 2019 I learned the <a href="https://getbootstrap.com/">Bootstrap</a> framework and redesigned the site myself.</p>
 
-<p>I created a <a href="/about-this-site/design-guide/">Design Guide</a> to document and showcase the site's custom styles, and I created a ReadMe with documentation and notes about how to update the site. The site supports both light and dark modes. (It automatically adjusts according to your browser preference.) The site has a human-readable site map as well as an XML site map, and the blog has a category index, a tag index, and an Atom feed. Additionally, the site has specially designed print styles, so if you choose to print any page, the printout should render nicely. Decorative images will not print, and URLs will be printed in parenthesis next to external links.</p>
+<p>In 2022, I undertook a larger redesign of the site, in which I prioritized accessibility and consciously avoided Jekyll themes and frameworks such as Bootstrap, instead preferring to write pretty much all the website code myself. I hosted the codebase on GitHub and the website with Netlify.</p>
 
-<p>This website is <a href="https://reuse.software/">REUSE-compliant</a>, which means that the copyright holder and license are explicitly indicated for each file in the codebase. Additionally, unless I'm mistaken, this site conforms to the Web Content Accessibility Guidelines (WCAG) 2.1 level AA.</p>
+<p>I created a design guide to document and showcase the site's custom styles, and I created a ReadMe with documentation and notes about how to update the site. The site supports both light and dark modes. (It automatically adjusts according to your browser preference.) The site has a human-readable site map as well as an XML site map, and the blog has a category index, a tag index, and an Atom feed. Additionally, the site has specially designed print styles, so if you choose to print any page, the printout should render nicely. (Decorative images will not print, and URLs will be printed in parenthesis next to external links.)</p>
 
-<a href="/" class="link-turncoat link-turncoat--standalone">{% include "partials/SVGs/arrow-right.svg" %} View My Personal Website/Blog</a>
+<p>This website is <a href="https://reuse.software/">REUSE-compliant</a>, which means that the copyright holder and license are explicitly indicated for each file in the codebase.</p>
+
+<a href="https://github.com/cncoulter/camcoulter.com" class="link-turncoat link-turncoat--standalone">{% include "partials/SVGs/arrow-right.svg" %} View the Jekyll codebase for my personal website/blog</a>
 
 
 <!--
