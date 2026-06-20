@@ -53,8 +53,8 @@ This statement was last updated on May 22, 2026.
 ## Website Design & Hosting
 
 * I use the static site generator [Eleventy](https://www.11ty.dev/) to knit this site together.
+* [This site's codebase](https://github.com/cncoulter/camcoulter.com_11ty) is hosted on GitHub.
 * This site is hosted with [Netlify](https://www.netlify.com/).
-* This site's codebase will be hosted somewhere. TK
 * View the [Design Guide](/about-this-site/design-guide/) for this site.
 
 When designing this site, I consciously avoided themes and frameworks such as Bootstrap, instead preferring to write pretty much all all the website code myself. I designed this site to be simple, clean, readable, and accessible. This site mostly functions as my personal blog, which includes a blog archive, category index, tag index, and an Atom feed.
