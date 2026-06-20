@@ -7,14 +7,14 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 This is my personal website/blog.
 
-* I use the static site generator [Eleventy](https://www.11ty.dev/) to knit this site together. I have written pretty much all the code myself, consciously avoided themes and frameworks such as Bootstrap.
-* This site's codebase will be hosted somewhere. TK
+* I use the static site generator [Eleventy](https://www.11ty.dev/) (11ty) to knit this site together. I have written pretty much all the code myself, consciously avoided themes and frameworks such as Bootstrap.
+* [This site's codebase](https://github.com/cncoulter/camcoulter.com_11ty) is hosted on GitHub.
 * This site is hosted with [Netlify](https://www.netlify.com/).
 * I am working toward making this website's codebase [REUSE-compliant](https://reuse.software/). That means each file should clearly indicate the copyright holder and license.
 
 To learn more about this website, view [About This Site](https://www.camcoulter.com/about-this-site/).
 
-My personal website/blog has been since 2016. In 2017, I migrated from WordPress to Jekyll. In 2026, I migrated from Jekyll to 11ty. I started this particular repo in 2026 when I switched to 11ty. In that process, I forked [Dozen](https://dozen.camcoulter.com/) to help get things started.
+I started my personal website/blog in 2016. In 2017, I migrated from WordPress to Jekyll. In 2026, I migrated from Jekyll to 11ty. I started this particular repo in 2026 when I switched to 11ty. In that process, I forked [Dozen](https://dozen.camcoulter.com/) to help get things started.
 
 ## To Publish
 
