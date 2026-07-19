@@ -16,17 +16,23 @@ To learn more about this website, view [About This Site](https://www.camcoulter.
 
 I started my personal website/blog in 2016. In 2017, I migrated from WordPress to Jekyll. In 2026, I migrated from Jekyll to 11ty. I started this particular repo in 2026 when I switched to 11ty. In that process, I forked [Dozen](https://dozen.camcoulter.com/) to help get things started.
 
-## To Publish
+## Jekyll to 11ty
 
-* Find a place to host
-* REMEMBER to update your git remotes!
-    * Update dozen to mention updating your git remote
-* Check Atom feed
-* Author blog post about it
+* Repos
+	* Update links
+	* Migrate Graph_Paper
+	* Migrate cncoulter.github.io
+	* Migrate camcoulter.com_Jekyll
+* Update dozen to mention updating your git remote
+* Atom feed
+	* Remove [INSERT_TOC]
+	* General polish
+* Author blog post about the change
 
-## In Progress
+## Next Steps
 
 * Add this back to the "About This Site" page: This website's codebase is [REUSE-compliant](https://reuse.software/). That means each file should clearly indicate the copyright holder and license.
+* Clean up Projects
 
 ## Features to Add
 

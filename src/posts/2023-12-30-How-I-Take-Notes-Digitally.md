@@ -4,6 +4,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 title: "How I Take Notes (Digitally)"
 description: "Most of my digital notes live together in one system, a folder with Markdown files that I can compile together into a simple website."
 date: 2023-12-30T13:17:00-08:00 # PST is -08:00, PDT is -07:00
+date_modified: 2026-07-19T16:35:00-07:00
 categorizedUnder:
 - web design
 taggedWith:
@@ -11,7 +12,7 @@ taggedWith:
 - CSS
 - Bash
 - Pandoc
-- GitHub
+- Git
 - notes
 image: desk-keyboard-notebook
 ---
@@ -24,7 +25,7 @@ Lately I have been rediscovering the joy of handwritten text. I spend so much ti
 
 This post is not about that. There is a place for handwritten notes, and there is a place for digital notes. Digitally, I have notes about my to-dos, goals, and priorities, about my favorite recipes, about various command-line utilities, about games I get invested in, and more. I also have a lot of lists. I like to make lists. You should see my reading list. It is joyously, stupidly long.
 
-Admittedly, I have digital notes scattered in a few different places, but most of them live together in one system, a folder with Markdown files that I can compile together into interlinked HTML files. Let me explain how that works and why I like it. I'm sharing because I think it is an awesome system with some real advantages and because it's different than what most people use or consider using. If you think it's cool, I have made a GitHub repository that you can clone and use to try it out yourself.
+Admittedly, I have digital notes scattered in a few different places, but most of them live together in one system, a folder with Markdown files that I can compile together into interlinked HTML files. Let me explain how that works and why I like it. I'm sharing because I think it is an awesome system with some real advantages and because it's different than what most people use or consider using. If you think it's cool, I have made a code repository that you can clone and use to try it out yourself.
 
 ## How It Works
 
@@ -70,11 +71,11 @@ It assumes you have a desktop computer, and you may not be able to compile your 
 
 ## Try It Out
 
-I set up a [GitHub repository](https://github.com/cncoulter/notes-to-website) that you can copy to set up your own notes system as I described here. Be sure to read the included ReadMe page for detailed instructions on getting set up and using the system.
+I set up a [code repository](https://codeberg.org/graceless-kilobyte-sequel/notes-to-website) that you can copy to set up your own notes system as I described here. Be sure to read the included ReadMe page for detailed instructions on getting set up and using the system.
 
-If you download the GitHub repository to your desktop, you can open the included index.html file to preview this notes system in your browser to get a better idea of it, but I also included an example of what it might look like here on this site in case you just want to see it in action:
+If you download the code repository to your desktop, you can open the included index.html file to preview this notes system in your browser to get a better idea of it, but I also included an example of what it might look like here on this site in case you just want to see it in action:
 
-<a href="/notes-to-website/" class="link-turncoat link-turncoat--standalone">View notes-to-website example site</a>
+<a href="https://notes-to-website.camcoulter.com/" class="link-turncoat link-turncoat--standalone">View notes-to-website example site</a>
 
 ***
 
