@@ -18,15 +18,6 @@ I started my personal website/blog in 2016. In 2017, I migrated from WordPress t
 
 ## Jekyll to 11ty
 
-* Repos
-	* Update links
-	* Migrate Graph_Paper
-	* Migrate cncoulter.github.io
-	* Migrate camcoulter.com_Jekyll
-* Update dozen to mention updating your git remote
-* Atom feed
-	* Remove [INSERT_TOC]
-	* General polish
 * Author blog post about the change
 
 ## Next Steps

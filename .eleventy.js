@@ -256,79 +256,92 @@ module.exports = async function (eleventyConfig) {
 	// Generates a Table of Contents (TOC) anywhere you have "[INSERT_TOC]".
     // Depends on the IdAttributePlugin adding ID attributes to all your headings.
     eleventyConfig.addTransform("add-toc", function(content) {
-        if ((this.page.outputPath || "").endsWith(".html") && content.includes("[INSERT_TOC]")) {
+        // First, check if the placeholder exists at all
+        if (content.includes("[INSERT_TOC]")) {
+            const outputPath = this.page.outputPath || "";
 
-            let toc = `<div class="raised">\n  <h2>Contents</h2>\n  <ol id="toc" class="section-nav">\n`;
-            let currentLevel = 2;
-            let first = true;
+            // Branch A: If it's an HTML file, generate the full TOC
+            if (outputPath.endsWith(".html")) {
+                let toc = `<div class="raised">\n  <h2>Contents</h2>\n  <ol id="toc" class="section-nav">\n`;
+                let currentLevel = 2;
+                let first = true;
 
-            // Find <h1> through <h6> tags that have an ID
-            const regex = /<h([1-6])[^>]*\bid="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
-            let match;
-            let foundHeadings = false;
-            let passedFirstH1 = false;
+                // Find <h1> through <h6> tags that have an ID
+                const regex = /<h([1-6])[^>]*\bid="([^"]+)"[^>]*>(.*?)<\/h\1>/gi;
+                let match;
+                let foundHeadings = false;
+                let passedFirstH1 = false;
 
-            while ((match = regex.exec(content)) !== null) {
-                const level = parseInt(match[1]);
+                while ((match = regex.exec(content)) !== null) {
+                    const level = parseInt(match[1]);
 
-                // Once we see the first h1, flip the flag to true and skip the h1 itself
-                if (level === 1 && !passedFirstH1) {
-                    passedFirstH1 = true;
-                    continue;
-                }
-
-                // If we haven't passed the first h1 yet, or if it's another h1 later on, skip it
-                if (!passedFirstH1 || level === 1) {
-                    continue;
-                }
-
-                const id = match[2];
-                const text = match[3];
-
-                // NEW: Explicitly skip the "Tagged with" heading
-                if (id === "tagged-with") {
-                    continue;
-                }
-
-                foundHeadings = true;
-
-                if (first) {
-                    if (level > 2) {
-                        toc += "<ol>\n".repeat(level - 2);
+                    // Once we see the first h1, flip the flag to true and skip the h1 itself
+                    if (level === 1 && !passedFirstH1) {
+                        passedFirstH1 = true;
+                        continue;
                     }
-                    first = false;
-                } else {
-                    if (level > currentLevel) {
-                        toc += "\n" + "<ol>\n".repeat(level - currentLevel);
-                    } else if (level < currentLevel) {
-                        toc += "</li>\n" + "</ol>\n</li>\n".repeat(currentLevel - level);
+
+                    // If we haven't passed the first h1 yet, or if it's another h1 later on, skip it
+                    if (!passedFirstH1 || level === 1) {
+                        continue;
+                    }
+
+                    const id = match[2];
+                    const text = match[3];
+
+                    // Explicitly skip the "Tagged with" heading
+                    if (id === "tagged-with") {
+                        continue;
+                    }
+
+                    foundHeadings = true;
+
+                    if (first) {
+                        if (level > 2) {
+                            toc += "<ol>\n".repeat(level - 2);
+                        }
+                        first = false;
                     } else {
-                        toc += "</li>\n";
+                        if (level > currentLevel) {
+                            toc += "\n" + "<ol>\n".repeat(level - currentLevel);
+                        } else if (level < currentLevel) {
+                            toc += "</li>\n" + "</ol>\n</li>\n".repeat(currentLevel - level);
+                        } else {
+                            toc += "</li>\n";
+                        }
                     }
+
+                    toc += `    <li class="toc-entry toc-h${level}"><a href="#${id}">${text}</a>`;
+                    currentLevel = level;
                 }
 
-                toc += `    <li class="toc-entry toc-h${level}"><a href="#${id}">${text}</a>`;
-                currentLevel = level;
-            }
+                if (foundHeadings) {
+                    toc += "</li>\n";
+                    if (currentLevel > 2) {
+                        toc += "</ol>\n</li>\n".repeat(currentLevel - 2);
+                    }
+                    toc += "  </ol>\n</div>";
 
-            if (foundHeadings) {
-                toc += "</li>\n";
-                if (currentLevel > 2) {
-                    toc += "</ol>\n</li>\n".repeat(currentLevel - 2);
+                    // Targets [INSERT_TOC] AND the paragraph tags wrapping it
+                    return content
+                        .replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, toc)
+                        .replace(/\[INSERT_TOC\]/g, toc); // Fallback
+                } else {
+                    // Erase the marker if no subheadings exist
+                    return content
+                        .replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, "")
+                        .replace(/\[INSERT_TOC\]/g, "");
                 }
-                toc += "  </ol>\n</div>";
-
-                // Targets [INSERT_TOC] AND the paragraph tags wrapping it
+            } 
+            // Branch B: If it's NOT an HTML file (feed.njk, we're looking at you), remove [INSERT_TOC]
+            else {
                 return content
-                    .replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, toc)
-                    .replace(/\[INSERT_TOC\]/g, toc); // Fallback just in case it wasn't wrapped
-            } else {
-                // Erase the marker and its wrapping <p> tags if no subheadings exist
-                return content
-                    .replace(/<p>\s*\[INSERT_TOC\]\s*<\/p>/g, "")
-                    .replace(/\[INSERT_TOC\]/g, "");
+                    // Target XML-escaped paragraph wrapper (standard in Atom/RSS feeds)
+                    .replace(/&lt;p&gt;\s*\[INSERT_TOC\]\s*&lt;\/p&gt;\s*/g, "")
             }
         }
+        
+        // If the placeholder isn't in the file at all, just return the content untouched
         return content;
     });
 
